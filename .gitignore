@@ -1,0 +1,10 @@
+# Project files
+/src/test/
+
+# Gradle
+/.gradle/
+/build/
+/out/
+
+# IntelliJ IDEA
+/.idea/
