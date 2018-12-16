@@ -1,2 +1,2 @@
-# CloudflareScraper
+# Cloudflare Scraper Library
 
