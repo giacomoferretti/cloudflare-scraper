@@ -31,7 +31,7 @@ plugins {
 }
 
 group = 'xyz.hexile'
-version = '0.1.0'
+version = '0.1.1'
 
 sourceCompatibility = 1.8
 
@@ -81,11 +81,9 @@ jar {
     manifest {
         attributes(
                 'Implementation-Version': version,
-                //'Built-By'              : System.properties['user.name'],
                 'Build-Timestamp': new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(new Date()),
                 'Created-By': "Gradle ${gradle.gradleVersion}",
-                'Build-Jdk': "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})",
-                //'Build-OS'              : "${System.properties['os.name']} ${System.properties['os.arch']} ${System.properties['os.version']}"
+                'Build-Jdk': "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})"
         )
     }
 }
@@ -115,7 +113,6 @@ javadoc {
     options.author()
     options.encoding = 'UTF-8'
     options.addStringOption('-html5')
-    options.addStringOption('tag', 'incubating:a:Incubating:')
 }
 
 bintray {
@@ -125,11 +122,12 @@ bintray {
     pkg {
         repo = 'maven'
         name = 'CloudflareScraper'
-        licenses = ['GPL-3.0']
-        vcsUrl = 'https://hexile@bitbucket.org/hexile/cloudflarescraper.git'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/giacomoferretti/CloudflareScraper.git'
         publish = true
         version {
             name = project.version
+            desc = "CloudflareScraper ${project.version}"
             released = new Date()
         }
     }

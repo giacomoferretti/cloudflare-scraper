@@ -38,6 +38,9 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Core class of CloudflareScraper
+ */
 public class CloudflareScraper {
 
     private static String[] DEFAULT_USER_AGENTS = new String[]{
@@ -90,49 +93,6 @@ public class CloudflareScraper {
         this.challengeDelay = challengeDelay;
         this.connectionTimeout = connectionTimeout;
         this.readTimeout = readTimeout;
-    }
-
-    public CloudflareScraper(Builder builder) {
-        System.out.println(System.getProperty("https.protocols"));
-        this.uri = builder.uri;
-        this.challengeDelay = builder.challengeDelay;
-        this.connectionTimeout = builder.connectionTimeout;
-        this.readTimeout = builder.readTimeout;
-        System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
-    }
-
-    public static class Builder {
-        // Required parameters
-        private URI uri;
-
-        // Optional parameters
-        private int challengeDelay;
-        private int connectionTimeout;
-        private int readTimeout;
-
-        public Builder(URI uri) {
-            this.uri = uri;
-        }
-
-        public Builder setChallengeDelay(int challengeDelay) {
-            this.challengeDelay = challengeDelay;
-            return this;
-        }
-
-
-        public Builder setConnectionTimeout(int connectionTimeout) {
-            this.connectionTimeout = connectionTimeout;
-            return this;
-        }
-
-        public Builder setReadTimeout(int readTimeout) {
-            this.readTimeout = readTimeout;
-            return this;
-        }
-
-        public CloudflareScraper build() {
-            return new CloudflareScraper(this);
-        }
     }
 
     public void connect() throws IOException, ScraperException, URISyntaxException, ScriptException {
