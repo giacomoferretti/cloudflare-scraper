@@ -31,7 +31,7 @@ public static void main(String... args) throws URISyntaxException, IOException, 
 }
 ```
 
-**Add cookies using **`HttpURLConnection`
+**Add cookies using** `HttpURLConnection`
 ```java
 HttpURLConnection connection = (HttpURLConnection) new URL("URL").openConnection();
 for (HttpCookie cookie : cookies) {
@@ -39,7 +39,7 @@ for (HttpCookie cookie : cookies) {
 }
 ```
 
-**Add cookies using **`OkHttpClient`
+**Add cookies using** `OkHttpClient`
 ```java
 OkHttpClient okHttpClient = new OkHttpClient();
 Request.Builder requestBuilder = new Request.Builder().url("URL");
@@ -80,4 +80,4 @@ repositories {
 }
 ```
 
-<a href='https://bintray.com/hexile/maven/CloudflareScraper?source=watch' alt='Get automatic notifications about new "CloudflareScraper" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_bw.png'></a><a href='https://bintray.com/hexile/maven/CloudflareScraper?source=watch' alt='Get automatic notifications about new "CloudflareScraper" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_bw.png'></a>
+<a href='https://bintray.com/hexile/maven/CloudflareScraper?source=watch' alt='Get automatic notifications about new "CloudflareScraper" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_bw.png'></a>
