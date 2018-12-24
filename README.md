@@ -1,5 +1,6 @@
-# Cloudflare Scraper Library <img align="right" src="https://i.imgur.com/9g5TRw1.png" height="200" width="200">
+# Cloudflare Scraper <img align="right" src="https://i.imgur.com/9g5TRw1.png" height="200" width="200">
 
+[![Build Status](https://travis-ci.com/giacomoferretti/CloudflareScraper.svg?branch=master)](https://travis-ci.com/giacomoferretti/CloudflareScraper)
 [![Latest](https://api.bintray.com/packages/hexile/maven/CloudflareScraper/images/download.svg)](https://bintray.com/hexile/maven/CloudflareScraper/_latestVersion)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/giacomoferretti/CloudflareScraper/blob/master/LICENSE)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/b0e83b55f5d24dcd8fe963a0ba664aec)](https://www.codacy.com/app/giacomoferretti/CloudflareScraper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=giacomoferretti/CloudflareScraper&amp;utm_campaign=Badge_Grade)

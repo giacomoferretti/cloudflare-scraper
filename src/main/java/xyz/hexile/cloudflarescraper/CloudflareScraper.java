@@ -84,10 +84,10 @@ public class CloudflareScraper {
     }
 
     public CloudflareScraper(CloudflareScraperBuilder builder) {
-        this.uri = builder.uri;
-        this.challengeDelay = builder.challengeDelay;
-        this.connectionTimeout = builder.connectionTimeout;
-        this.readTimeout = builder.readTimeout;
+        this.uri = builder.getUri();
+        this.challengeDelay = builder.getChallengeDelay();
+        this.connectionTimeout = builder.getConnectionTimeout();
+        this.readTimeout = builder.getReadTimeout();
     }
 
     public boolean connect() throws IOException, ScraperException {

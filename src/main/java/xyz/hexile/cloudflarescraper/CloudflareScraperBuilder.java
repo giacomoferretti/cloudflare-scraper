@@ -24,12 +24,12 @@ import java.net.URI;
  */
 public class CloudflareScraperBuilder {
     // Required parameters
-    URI uri;
+    private URI uri;
 
     // Optional parameters
-    int challengeDelay = 5000;
-    int connectionTimeout = 5000;
-    int readTimeout = 5000;
+    private int challengeDelay = 5000;
+    private int connectionTimeout = 5000;
+    private int readTimeout = 5000;
 
     public CloudflareScraperBuilder(URI uri) {
         this.uri = uri;
@@ -52,5 +52,21 @@ public class CloudflareScraperBuilder {
 
     public CloudflareScraper build() {
         return new CloudflareScraper(this);
+    }
+
+    public URI getUri() {
+        return uri;
+    }
+
+    public int getChallengeDelay() {
+        return challengeDelay;
+    }
+
+    public int getConnectionTimeout() {
+        return connectionTimeout;
+    }
+
+    public int getReadTimeout() {
+        return readTimeout;
     }
 }
