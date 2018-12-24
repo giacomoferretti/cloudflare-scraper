@@ -48,8 +48,8 @@ public class CloudflareScraper {
 
     private static String USER_AGENT = DEFAULT_USER_AGENTS[new Random().nextInt(DEFAULT_USER_AGENTS.length)];
 
+    // Internal
     private HttpCookie cfduid;
-
     private String challengeContent;
     private String challengeVc;
     private String challengePass;
