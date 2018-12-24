@@ -31,7 +31,7 @@ public static void main(String... args) throws URISyntaxException, IOException, 
 }
 ```
 
-**Adding cookies to `HttpURLConnection`**
+**Add cookies using **`HttpURLConnection`
 ```java
 HttpURLConnection connection = (HttpURLConnection) new URL("URL").openConnection();
 for (HttpCookie cookie : cookies) {
@@ -39,7 +39,7 @@ for (HttpCookie cookie : cookies) {
 }
 ```
 
-**Adding cookies to `OkHttpClient`**
+**Add cookies using **`OkHttpClient`
 ```java
 OkHttpClient okHttpClient = new OkHttpClient();
 Request.Builder requestBuilder = new Request.Builder().url("URL");

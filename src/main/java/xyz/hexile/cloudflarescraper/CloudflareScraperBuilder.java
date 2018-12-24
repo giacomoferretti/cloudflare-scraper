@@ -27,7 +27,7 @@ public class CloudflareScraperBuilder {
     private URI uri;
 
     // Optional parameters
-    private int challengeDelay = 5000;
+    private int challengeDelay = 4000;
     private int connectionTimeout = 5000;
     private int readTimeout = 5000;
 
