@@ -8,6 +8,3 @@
 
 # IntelliJ IDEA
 /.idea/
-
-# Unknown
-.attach_pid*

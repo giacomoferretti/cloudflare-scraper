@@ -48,13 +48,11 @@ public class CloudflareScraper {
 
     private static String USER_AGENT = DEFAULT_USER_AGENTS[new Random().nextInt(DEFAULT_USER_AGENTS.length)];
 
-    // Internal
     private HttpCookie cfduid;
     private String challengeContent;
     private String challengeVc;
     private String challengePass;
 
-    // Parameters
     private URI uri;
     private int challengeDelay;
     private int connectionTimeout;
@@ -108,7 +106,6 @@ public class CloudflareScraper {
             return false;
         }
     }
-
 
     public List<HttpCookie> getCookies() throws IOException, URISyntaxException, InterruptedException, ScraperException, ScriptException {
         String challengeAnswer = getAnswer(extractChallenge(challengeContent));
@@ -238,5 +235,37 @@ public class CloudflareScraper {
     private static String getDomainName(URI uri) {
         String domain = uri.getHost();
         return domain.startsWith("www.") ? domain.substring(4) : domain;
+    }
+
+    public static String getUserAgent() {
+        return USER_AGENT;
+    }
+
+    public static void setUserAgent(String userAgent) {
+        USER_AGENT = userAgent;
+    }
+
+    public int getChallengeDelay() {
+        return challengeDelay;
+    }
+
+    public void setChallengeDelay(int challengeDelay) {
+        this.challengeDelay = challengeDelay;
+    }
+
+    public int getConnectionTimeout() {
+        return connectionTimeout;
+    }
+
+    public void setConnectionTimeout(int connectionTimeout) {
+        this.connectionTimeout = connectionTimeout;
+    }
+
+    public int getReadTimeout() {
+        return readTimeout;
+    }
+
+    public void setReadTimeout(int readTimeout) {
+        this.readTimeout = readTimeout;
     }
 }
