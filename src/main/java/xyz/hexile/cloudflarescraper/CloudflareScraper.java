@@ -53,7 +53,6 @@ public class CloudflareScraper {
     private String challengeContent;
     private String challengeVc;
     private String challengePass;
-    private String challengeAnswer;
 
     // Parameters
     private URI uri;
@@ -112,8 +111,7 @@ public class CloudflareScraper {
 
 
     public List<HttpCookie> getCookies() throws IOException, URISyntaxException, InterruptedException, ScraperException, ScriptException {
-        challengeAnswer = getAnswer(extractChallenge(challengeContent));
-
+        String challengeAnswer = getAnswer(extractChallenge(challengeContent));
         HttpURLConnection connection = buildRequest(generateAnswerURI(uri, challengeVc, challengePass, challengeAnswer));
         connection.setRequestProperty("Cookie", cfduid.toString());
 
