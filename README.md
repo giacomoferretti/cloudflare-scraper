@@ -80,4 +80,4 @@ repositories {
 }
 ```
 
-<a href='https://bintray.com/hexile/maven/CloudflareScraper?source=watch' alt='Get automatic notifications about new "CloudflareScraper" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_bw.png'></a><a href='https://bintray.com/hexile/maven/CloudflareScraper?source=watch' alt='Get automatic notifications about new "CloudflareScraper" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_bw.png'></a>
+<a href='https://bintray.com/hexile/maven/CloudflareScraper?source=watch' alt='Get automatic notifications about new "CloudflareScraper" versions'><img src='https://www.bintray.com/docs/images/bintray_badge_bw.png'></a>
