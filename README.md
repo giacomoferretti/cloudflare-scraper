@@ -11,6 +11,7 @@
 
 This is a libray written in Java that helps you solve the IUAM challenge in websites protected by Cloudflare.
 
+<!-- Example code -->
 ## Example code
 ```java
 public static void main(String... args) throws URISyntaxException, IOException, ScraperException, InterruptedException, ScriptException {
@@ -30,15 +31,15 @@ public static void main(String... args) throws URISyntaxException, IOException, 
 }
 ```
 
-### Adding cookies to `HttpUrlConnection`
+**Adding cookies to `HttpURLConnection`**
 ```java
-HttpUrlConnection connection = (HttpURLConnection) new URL("URL").openConnection();
+HttpURLConnection connection = (HttpURLConnection) new URL("URL").openConnection();
 for (HttpCookie cookie : cookies) {
     connection.setRequestProperty("Cookie", cookie.toString());
 }
 ```
 
-### Adding cookies to `HttpUrlConnection`
+**Adding cookies to `OkHttpClient`**
 ```java
 OkHttpClient okHttpClient = new OkHttpClient();
 Request.Builder requestBuilder = new Request.Builder().url("URL");
@@ -49,6 +50,7 @@ for (HttpCookie cookie : cookies) {
 Request request = requestBuilder.build();
 ```
 
+<!-- Download section -->
 ## Download
 
 **Maven**
@@ -56,7 +58,7 @@ Request request = requestBuilder.build();
 <dependency>
     <groupId>xyz.hexile</groupId>
     <artifactId>cloudflarescraper</artifactId>
-    <version>1.0-alpha2</version>
+    <version>1.0</version>
 </dependency>
 ```
 ```xml
@@ -70,7 +72,7 @@ Request request = requestBuilder.build();
 **Gradle**
 ```gradle
 dependencies {
-    compile 'xyz.hexile:cloudflarescraper:1.0-alpha2'
+    compile 'xyz.hexile:cloudflarescraper:1.0'
 }
 
 repositories {
