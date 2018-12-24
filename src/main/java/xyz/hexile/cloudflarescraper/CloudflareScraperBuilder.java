@@ -19,17 +19,17 @@ package xyz.hexile.cloudflarescraper;
 import java.net.URI;
 
 /**
- * Used to create {@link xyz.hexile.cloudflarescraper.CloudflareScraper} instances.
- * This helps you with setting up {@link xyz.hexile.cloudflarescraper.CloudflareScraper} instances without errors.
+ * Used to create {@link CloudflareScraper} instances.
+ * This helps you with setting up {@link CloudflareScraper} instances without errors.
  */
 public class CloudflareScraperBuilder {
     // Required parameters
-    private URI uri;
+    URI uri;
 
     // Optional parameters
-    private int challengeDelay;
-    private int connectionTimeout;
-    private int readTimeout;
+    int challengeDelay = 5000;
+    int connectionTimeout = 5000;
+    int readTimeout = 5000;
 
     public CloudflareScraperBuilder(URI uri) {
         this.uri = uri;
@@ -51,6 +51,6 @@ public class CloudflareScraperBuilder {
     }
 
     public CloudflareScraper build() {
-        return new CloudflareScraper(uri);
+        return new CloudflareScraper(this);
     }
 }

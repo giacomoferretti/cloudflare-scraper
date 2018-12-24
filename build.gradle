@@ -14,10 +14,6 @@
  * limitations under the License.
  */
 
-import org.apache.tools.ant.filters.ReplaceTokens
-
-import java.text.SimpleDateFormat
-
 plugins {
     id 'java'
 
@@ -31,7 +27,7 @@ plugins {
 }
 
 group = 'xyz.hexile'
-version = '0.1.1'
+version = '1.0-alpha1'
 
 sourceCompatibility = 1.8
 
@@ -44,36 +40,6 @@ dependencies {
 
     implementation 'commons-io:commons-io:2.6'
     implementation 'org.jsoup:jsoup:1.11.3'
-}
-
-task sourcesForRelease(type: Copy) {
-    from ('src/main/java') {
-        include '**/CloudflareScraperInfo.java'
-        filter(ReplaceTokens, tokens: [
-                version: version,
-                author:  "Giacomo Ferretti",
-                website: "https://hexile.xyz/",
-                github:  "https://github.com/giacomoferretti/CloudflareScraper"
-        ])
-    }
-    into 'build/filteredSrc'
-
-    includeEmptyDirs = false
-}
-
-task generateJavaSources(type: SourceTask) {
-    def javaSources = sourceSets.main.allJava.filter {
-        it.name != 'CloudflareScraperInfo.java'
-    }
-    source = javaSources + sourcesForRelease.destinationDir
-
-    dependsOn sourcesForRelease
-}
-
-compileJava {
-    source = generateJavaSources.source
-
-    dependsOn generateJavaSources
 }
 
 jar {
@@ -93,12 +59,7 @@ shadowJar.classifier = 'shaded'
 // Generates '-sources.jar'
 task sourcesJar(type: Jar, dependsOn: classes) {
     classifier = 'sources'
-    from ('src/main/java') {
-        exclude '**/CloudflareScraperInfo.java'
-    }
-    from sourcesForRelease.destinationDir
-
-    dependsOn sourcesForRelease
+    from sourceSets.main.allSource
 }
 
 // Generates '-javadoc.jar'

@@ -16,13 +16,8 @@
 
 package xyz.hexile.cloudflarescraper;
 
-/**
- * Contains information about this specific build of CluodflareScraper.
- */
-public class CloudflareScraperInfo {
-
-    public static final String VERSION = "@version@";
-    public static final String AUTHOR = "@author@";
-    public static final String WEBSITE = "@website@";
-    public static final String GITHUB = "@github@";
+public class ScraperException extends Exception {
+    ScraperException(String message) {
+        super(message);
+    }
 }
