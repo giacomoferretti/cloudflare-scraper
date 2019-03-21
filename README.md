@@ -1,3 +1,11 @@
+<!-- Announcement -->
+### A message from the owner (21/03/2019)
+```
+Sorry, not working for now. CloudFlare changed it's protection method. Gonna work on a fix soon.
+```
+
+---
+
 <!-- Title -->
 # Cloudflare Scraper <img align="right" src="https://i.imgur.com/9g5TRw1.png" height="200" width="200">
 
