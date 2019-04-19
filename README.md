@@ -1,7 +1,11 @@
 <!-- Announcement -->
-### A message from the owner (21/03/2019)
+### Updates from the owner 
 ```
+21 March 2019:
 Sorry, not working for now. CloudFlare changed it's protection method. Gonna work on a fix soon.
+
+19 April 2019:
+The challenge changed again... Also I didn't update the repo yet. I don't have much time to update it.
 ```
 
 ---
